@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>cloudengineeringacademy on mmb198 blog site</title>
+    <link>https://mmb198.github.io/en/tags/cloudengineeringacademy/</link>
+    <description>Recent content in cloudengineeringacademy on mmb198 blog site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-au</language>
+    <copyright>mmb198</copyright>
+    <lastBuildDate>Wed, 14 Feb 2024 21:25:43 +0800</lastBuildDate>
+    <atom:link href="https://mmb198.github.io/en/tags/cloudengineeringacademy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud Engineer Academy Week 1 Blog</title>
+      <link>https://mmb198.github.io/en/posts/ca_week1/</link>
+      <pubDate>Wed, 14 Feb 2024 21:25:43 +0800</pubDate>
+      <guid>https://mmb198.github.io/en/posts/ca_week1/</guid>
+      <description>I&amp;rsquo;ve embarked on a 12 week Cloud Engineering Academy, with the aim to increase my knowledge and skills in cloud computing. This is my first blog and I will be using this blog space to post summaries of my weekly study. The blog is currently hosted on Github and I am aiming to move the blog onto my cloud host as I progress through the course.&#xA;Week 1&#xA;To make my weekly summary, I start by making a list of topics/subjects that I study this week from my Obisidian note titles.</description>
+    </item>
+  </channel>
+</rss>

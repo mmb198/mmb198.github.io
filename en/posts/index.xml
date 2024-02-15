@@ -1,0 +1,78 @@
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+	<channel>
+		<title>Posts on mmb198 blog site</title>
+		<link>https://mmb198.github.io/en/posts/</link>
+		<description>Recent content in Posts on mmb198 blog site</description>
+		<generator>Hugo -- gohugo.io</generator>
+		<language>en-au</language>
+		<copyright>mmb198</copyright>
+		<lastBuildDate>Wed, 14 Feb 2024 21:25:43 +0800</lastBuildDate>
+		<atom:link href="https://mmb198.github.io/en/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Cloud Engineer Academy Week 1 Blog</title>
+			<link>https://mmb198.github.io/en/posts/ca_week1/</link>
+			<pubDate>Wed, 14 Feb 2024 21:25:43 +0800</pubDate>
+			
+			<guid>https://mmb198.github.io/en/posts/ca_week1/</guid>
+			<description>I&amp;rsquo;ve embarked on a 12 week Cloud Engineering Academy, with the aim to increase my knowledge and skills in cloud computing. This is my first blog and I will be using this blog space to post summaries of my weekly study. The blog is currently hosted on Github and I am aiming to move the blog onto my cloud host as I progress through the course.
+Week 1
+To make my weekly summary, I start by making a list of topics/subjects that I study this week from my Obisidian note titles.</description>
+			<content type="html"><![CDATA[<p>I&rsquo;ve embarked on a 12 week Cloud Engineering Academy, with the aim to increase my knowledge and skills in cloud computing. This is my first blog and I will be using this blog space to post summaries of my weekly study. The blog is currently hosted on Github and I am aiming to move the blog onto my cloud host as I progress through the course.</p>
+<p>Week 1</p>
+<p>To make my weekly summary, I start by making a list of topics/subjects that I study this week from my Obisidian note titles. Once I&rsquo;ve compiled this list, I then test my recall by attempting to write down all the information I retained about the subject. I then input my summaries into Bard for a quality control/accuracy check and review the items that bard highlights against my Obsidian notes. Below is my summary for week 1:</p>
+<h2 id="cloud-service-types">Cloud Service Types</h2>
+<p>IAAS - Infrastructure as a Service - Compute, storage etc (EC2, S3) - Base infrastructure that you can build whatever you want on.
+PAAS - Platform as a Service - The underlying infrastructure is looked after by the service provider (hardware and OS), meaning you can focus on the service/app you are building/deploying (ex: Elastic Beanstalk, Lambda)
+SAAS - Software as a Service - Elastic, Adobe Photoshop, AI images, M365, Teams etc</p>
+<ol>
+<li>Onprem - All physical infrastructure and services are provided &ldquo;on premises&rdquo;.</li>
+<li>Cloud - All services are provided through the cloud. All hardware is through the providers Data Centre. Maintenance, security, power and cooling for the physical infrastructure is undertaken by the Service Provider.</li>
+<li>Hybrid - Combination of both onprem and cloud infrastructure.</li>
+</ol>
+<h2 id="sdlc">SDLC</h2>
+<p>Software Development Life Cycle DLC models: Waterfall and Agile</p>
+<p>Sequential approach: Requirements (scope), Design, Development, Testing, Deployment, Maintenance.</p>
+<h2 id="aws-account-creation">AWS account creation</h2>
+<ol>
+<li>Created admin account</li>
+<li>Added MFA to root and admin accounts</li>
+<li>Set billing alerts</li>
+</ol>
+<h2 id="virtualisation">Virtualisation</h2>
+<p>Baremetal, type 1 hypervisors vs host based virtualisation
+Virtualisation of hardware (cpu and memory for O/S and compute tasks),  storage (multiple disks seen as a single storage device)</p>
+<p>The ability for a single server to act as multiple servers by allocating resources (cpu, memory etc) across virtual machines. Example 32 core CPU and 64GB of ram server can become 4 virtual machines/servers of 8 CPU cores and 16GB of ram. Resources do not need to be equal across VM&rsquo;s and should reflect the amount resources required for the application/task.</p>
+<h2 id="cloud-networking">Cloud networking</h2>
+<p>Introduction into networking engineering concepts of IP addressing, DHCP, DNS, NAT and protocols (TCP/IP, HTTP/HTTPS). Overview of networking hardware (routers and switches) and the ability to deploy virtual hardware in cloud deployments.</p>
+<h2 id="operating-systems">Operating Systems</h2>
+<p>Overview of three main O/S&rsquo;s (Windows, Linux, macOS). Touched on the different Linux distros (CentOS, Redhat, Ubuntu, SELinux etc), that many are open source and low cost.</p>
+<h2 id="databases">Databases</h2>
+<p>Databases were split into two main types, relational and nonrelational (nonSQL).
+Relational is used to for large datasets with similar inputs, such as maintaining the name, address, DOB etc for staff and students at a school/university.
+NonSQL is usually used when varied datasets will be ingested and flexibility is required. Can be column based, graph, key-value, document etc type database.</p>
+<p>Captain CRUD: Create, Read, Update, Delete. Database strings/command types. Can be used on both Relational and NonSQL database types.</p>
+<h2 id="labsprojects">Labs/projects</h2>
+<ol>
+<li>AWS account setup - touched on above</li>
+<li>Completed basic networking engineering commands such as ping, find ip address (ipconfig/ifconfig, web ip check), traceroute/tracert, curl requests.</li>
+<li>Windows and macOS setups - Discovered Chocolatey, as package manager for Windows, I love it. Ubuntu - sudo apt-get install &ldquo;program name&rdquo;, I found the Chocolatey similar to Debian/Ubuntu advanced packaging tool (APT), apt-get install &ldquo;program name&rdquo; vs choco install &ldquo;program name&rdquo;.
+<ol>
+<li>Install Choclatey in Powershell:</li>
+<li>Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString(&lsquo;<a href="https://community.chocolatey.org/install.ps1'">https://community.chocolatey.org/install.ps1'</a>))</li>
+<li>Basic Chocolatey commands:</li>
+<li>choco install &ldquo;program name&rdquo;</li>
+<li>choco list - displays a list of installed packages</li>
+<li>choco search &ldquo;package name&rdquo; - searches for available packages</li>
+<li>choco outdated - will provide a list of outdated packages on the machine</li>
+<li>choco upgrade &ldquo;package name&rdquo; - upgrade the outdated packages identified in the previous command</li>
+<li>choco uninstall &ldquo;package name&rdquo;</li>
+</ol>
+</li>
+</ol>
+<p><img src="/week1.png" alt="Week 1 - Obisidian Mind Map"></p>
+]]></content>
+		</item>
+		
+	</channel>
+</rss>
