@@ -1,0 +1,251 @@
+
+
+<!DOCTYPE html>
+<html lang="en-au">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="15 days">
+<link rel="author" href="/humans.txt">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#494f5c">
+<meta name="msapplication-TileColor" content="#494f5c">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#494f5c"><meta name="author" content="">
+<meta itemprop="name" content="Cloud Engineer Academy Week 2 Blog">
+<meta itemprop="description" content="Version Control Learnt about 3 main types of version control systems: 1. Local: All repositories/data are only held and accessible from a local machine, making it difficult to collaborate with others. 2. Centralised: The repository is kept on a main server, any updates have to be committed to the central server. 3. Distributed: Repositories are distributed across end users and servers. Any of the users or servers can act as the central repository."><meta itemprop="datePublished" content="2024-02-21T21:37:43+08:00" />
+<meta itemprop="dateModified" content="2024-02-21T21:37:43+08:00" />
+<meta itemprop="wordCount" content="918">
+<meta itemprop="keywords" content="cloudengineeringacademy,week2," /><meta property="og:title" content="Cloud Engineer Academy Week 2 Blog" />
+<meta property="og:description" content="Version Control Learnt about 3 main types of version control systems: 1. Local: All repositories/data are only held and accessible from a local machine, making it difficult to collaborate with others. 2. Centralised: The repository is kept on a main server, any updates have to be committed to the central server. 3. Distributed: Repositories are distributed across end users and servers. Any of the users or servers can act as the central repository." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mmb198.github.io/en/posts/ca_week2/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-02-21T21:37:43+08:00" />
+<meta property="article:modified_time" content="2024-02-21T21:37:43+08:00" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Cloud Engineer Academy Week 2 Blog"/>
+<meta name="twitter:description" content="Version Control Learnt about 3 main types of version control systems: 1. Local: All repositories/data are only held and accessible from a local machine, making it difficult to collaborate with others. 2. Centralised: The repository is kept on a main server, any updates have to be committed to the central server. 3. Distributed: Repositories are distributed across end users and servers. Any of the users or servers can act as the central repository."/>
+<title>Cloud Engineer Academy Week 2 Blog</title>
+<link rel="stylesheet dns-prefetch preconnect preload prefetch" as="style" href="https://mmb198.github.io/css/style.min.627c6e340ad1c87ebacbb2c0bd5ca88f784362d2a768bb67f5892a1c98b9db19.css" integrity="sha256-YnxuNArRyH66y7LAvVyoj3hDYtKnaLtn9YkqHJi52xk=" crossorigin="anonymous">
+	</head>
+<body id="page">
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://mmb198.github.io">mmb198 blog site</a>
+				</div>
+				<nav class="site-nav hide-in-mobile"><a href="https://mmb198.github.io/en/posts/">Posts</a><a href="https://mmb198.github.io/en/about-hugo/">About</a></nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://github.com/mmb198" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="share-btn" class="hdr-btn" title="Share"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share-2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg></button>
+ 
+<div id="share-links" class="animated fast">
+    
+    
+    
+    
+    <ul>
+        <li>
+            <a href="https://twitter.com/intent/tweet?hashtags=hermit2&amp;url=https%3a%2f%2fmmb198.github.io%2fen%2fposts%2fca_week2%2f&amp;text=Cloud%20Engineer%20Academy%20Week%202%20Blog" target="_blank" rel="noopener" aria-label="Share on X"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="st0" d="m21.3 21.1 -11.4 -18.2h-7.2l11.4 18.2zm-18.6 0 7.2 -6.6m4.2 -5 7.2 -6.6"/></svg></a>
+        </li>
+        <li>
+            <a href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fmmb198.github.io%2fen%2fposts%2fca_week2%2f" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+        </li>
+        <li>
+            <a href="mailto:?subject=Cloud%20Engineer%20Academy%20Week%202%20Blog&amp;body=https%3a%2f%2fmmb198.github.io%2fen%2fposts%2fca_week2%2f" target="_self" rel="noopener" aria-label="Share on Email"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmmb198.github.io%2fen%2fposts%2fca_week2%2f&amp;source=https%3a%2f%2fmmb198.github.io&amp;title=Cloud%20Engineer%20Academy%20Week%202%20Blog&amp;summary=Cloud%20Engineer%20Academy%20Week%202%20Blog%2c%20by%20%3cnil%3e%0a%0a%3cnil%3e%0a" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+        </li>
+        <li>
+            <a href="#" onclick="linkShare(&#34;Cloud Engineer Academy Week 2 Blog&#34;,&#34;https://mmb198.github.io/en/posts/ca_week2/&#34;,&#34;Cloud Engineer Academy Week 2 Blog, by \u003cnil\u003e\n\n\u003cnil\u003e\n&#34;); return false;" target="_self" rel="noopener" aria-label="Copy Link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></a>
+        </li>
+    </ul>
+</div><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="https://mmb198.github.io/en/posts/">Posts</a></li>
+			<li><a href="https://mmb198.github.io/en/about-hugo/">About</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner animated fadeIn faster"><article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>Feb 21, 2024</span></div>
+				<h1>Cloud Engineer Academy Week 2 Blog</h1>
+			</header>
+			<div class="post-info"><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-feather"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg><a href="" target="_blank"></a></p>
+<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://mmb198.github.io/en/tags/cloudengineeringacademy">cloudengineeringacademy</a></span><span class="tag"><a href="https://mmb198.github.io/en/tags/week2">week2</a></span></p>
+<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>918 Words
+    - Read time = 
+    
+    
+    
+    4 Minutes, 10 Seconds</p>
+<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2024-02-21 21:37 &#43;0800</p></div>
+			<hr class="post-end">
+			<div class="content">
+				<h1 id="version-control">Version Control<a href="#version-control" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h1>
+<p>Learnt about 3 main types of version control systems:
+1. Local: All repositories/data are only held and accessible from a local machine, making it difficult to collaborate with others.
+2. Centralised: The repository is kept on a main server, any updates have to be committed to the central server.
+3. Distributed: Repositories are distributed across end users and servers. Any of the users or servers can act as the central repository.</p>
+<h1 id="git">GIT<a href="#git" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h1>
+<ul>
+<li>Set up a GitHub account, configured MFA and ssh access. Command to check that ssh is connected **ssh -T <a href="mailto:git@github.com">git@github.com</a></li>
+<li>Installed git in Windows and Linux and set up CLI access via ssh.
+<ul>
+<li>SSH encrypts the data flow between my machine and github, ensuring confidentiality in the transmission of data that I commit to the repo.</li>
+</ul>
+</li>
+</ul>
+<h1 id="aws-cli">AWS CLI<a href="#aws-cli" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h1>
+<ul>
+<li>Installed the AWS CLI in Windows and Linux</li>
+<li>Added security keys in AWS console and installed them into AWS CLI. This now enables control of my AWS account through the CLI. The CLI is definitely faster than clicking and confirming through the console.</li>
+<li>Command structure:
+aws + service type + what you want to do, examples:
+aws + s3 service + list files = <strong>aws s3 ls</strong>
+aws + iam + list access keys = <strong>aws iam list-access-keys</strong></li>
+</ul>
+<h1 id="cloud-architecture--system-design">Cloud Architecture &amp; System Design<a href="#cloud-architecture--system-design" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h1>
+<h2 id="front-end-vs-back-end">Front end vs back end<a href="#front-end-vs-back-end" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<ul>
+<li>Front end = user facing, interacts with the backend via API&rsquo;s (Application Programming Interface).</li>
+<li>Back end = All of the infrastructure and applications that enables the front end to function.</li>
+</ul>
+<h2 id="vertical-vs-horizontal-scaling">Vertical vs Horizontal scaling<a href="#vertical-vs-horizontal-scaling" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<ul>
+<li>Vertical scaling = increasing or decreasing the size of the hardware - such as EC2 t2.micro, t2.small, t2.medium etc. As the size increases additional hardware is provided such as more CPU cores and memory.</li>
+<li>Horizontal scaling = Instead of increasing hardware capacity as with vertical scaling, horizontal scaling instead increases the amount of instances. Instead of increasing from a t2.micro instance to a single t2.small instance, you could run 3 x t2.micro instances. This provides additional computing resources and also provides redundancy as there are now two extra compute instances in the event that one of them becomes unresponsive or crashes.</li>
+</ul>
+<h2 id="load-balancing">Load Balancing<a href="#load-balancing" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p>These can be hardware or software that distributes data across your infrastructure. Is used to ensure that a server isn&rsquo;t being overloaded while other servers are sitting idle. Can also decide which server is closest to the end user in order to reduce latency for their request.</p>
+<h2 id="high-availability-and-fault-tolerance">High Availability and Fault Tolerance<a href="#high-availability-and-fault-tolerance" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<ul>
+<li>High availability = Redundancy within a network that enables standby infrastructure to take over in the event of the main services becoming unresponsive or crashing. Multiple instances can be used across different Availability Zones (AZ) to ensure continued operation even if an AZ experiences an outage. Use of health checks, auto scaling and load balancing to maintain high availability.</li>
+<li>Fault tolerance = The ability to continue providing services in the event of a fault, issue or outage. Intent is that faults do not impact the user experience.</li>
+</ul>
+<h2 id="lab---design-a-web-application-architecture">Lab - Design a Web Application Architecture<a href="#lab---design-a-web-application-architecture" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p><img src="/week2.png" alt="AWS web app architecture v3"></p>
+<p>Summary of Cloud Architecture for Web Application</p>
+<p>This document outlines the purpose of each component and the rationale behind key architectural decisions in our cloud architecture for the web application.</p>
+<p><strong>Components:</strong></p>
+<ul>
+<li><strong>VPC (Virtual Private Cloud):</strong> Provides a secure and isolated environment for our application resources.</li>
+<li><strong>Route 53:</strong> Routes incoming traffic to the application through a domain name.</li>
+<li><strong>Public and Private Subnets:</strong> </li>
+<li><strong>Public Subnets:</strong>
+<ul>
+<li><strong>Purpose:</strong> Host web servers that require internet access to serve content to users.</li>
+<li><strong>Reasoning:</strong> Enables users to access the application through the internet.</li>
+</ul>
+</li>
+<li><strong>Private Subnets:</strong>
+<ul>
+<li><strong>Purpose:</strong> Host application servers and databases that don&rsquo;t require direct internet access but need to communicate with web servers.</li>
+<li><strong>Reasoning:</strong> Enhances security by restricting access to critical components from the public internet.</li>
+</ul>
+</li>
+<li><strong>Web Servers and Application Servers:</strong> </li>
+<li><strong>Web Servers (EC2 Instances):</strong>
+<ul>
+<li><strong>Purpose:</strong> Serve static content (HTML, CSS, JavaScript) and handle initial user requests.</li>
+<li><strong>Reasoning:</strong> Offloads static content serving from application servers, improving performance and scalability.</li>
+</ul>
+</li>
+<li><strong>Application Servers (EC2 Instances):</strong>
+<ul>
+<li><strong>Purpose:</strong> Process application logic, interact with the database, and generate dynamic content.</li>
+<li><strong>Reasoning:</strong> Provides flexibility and scalability for handling application logic and database interactions.EC2 instances host the web application and application logic.</li>
+</ul>
+</li>
+<li><strong>Load Balancers:</strong> 
+<ul>
+<li><strong>Purpose:</strong> Distribute incoming traffic evenly across multiple web and application servers.</li>
+<li><strong>Reasoning:</strong> Ensures high availability and prevents overloading individual servers, improving application performance and scalability.</li>
+</ul>
+</li>
+<li><strong>AWS WAF:</strong> Protects the web application from malicious attacks.
+<ul>
+<li>
+<ul>
+<li><strong>Purpose:</strong> Filters and blocks malicious traffic attempting to exploit vulnerabilities in the web application.</li>
+</ul>
+</li>
+<li><strong>Reasoning:</strong> Strengthens application security by mitigating common web attacks like SQL injection and cross-site scripting</li>
+</ul>
+</li>
+<li><strong>Amazon RDS (Relational Database Service):</strong> 
+<ul>
+<li><strong>Purpose:</strong> Provides a managed, scalable, and highly available database service for storing application data.</li>
+<li><strong>Reasoning:</strong> Offers a reliable and secure solution for managing application data without the need for manual database administration.</li>
+</ul>
+</li>
+<li><strong>AWS S3:</strong> 
+<ul>
+<li>
+<ul>
+<li><strong>Purpose:</strong> Stores static content like images, videos, and other application assets cost-effectively and efficiently.</li>
+</ul>
+</li>
+<li><strong>Reasoning:</strong> Provides a scalable and cost-effective way to store and manage large amounts of static content, offloading storage from web servers and improving performance.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Architectural Decisions:</strong></p>
+<ul>
+<li><strong>Horizontal Scaling:</strong> Web and application servers are deployed in auto scaling groups for horizontal scaling. This allows automatic scaling up or down based on traffic demands, ensuring optimal performance and resource utilization.</li>
+<li><strong>Redundancy:</strong> Deploying critical components like web servers, application servers, and databases across multiple availability zones within the VPC ensures continued operation even if one zone experiences an outage.</li>
+<li><strong>Security:</strong> Utilizing a VPC with public/private subnets and a WAF strengthens the application&rsquo;s security posture by isolating resources and filtering malicious traffic.</li>
+</ul>
+
+			</div>
+
+<div class="related-posts thin">
+	<h2>See Also</h2>
+	<ul>
+	
+	<li><a href="/en/posts/ca_week1/">Cloud Engineer Academy Week 1 Blog</a></li>
+	
+	</ul>
+</div>
+
+		</article>
+		<div class="post-nav thin">
+			<a class="prev-post" href="https://mmb198.github.io/en/posts/ca_week1/">
+				<span class="post-nav-label">Older&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>Cloud Engineer Academy Week 1 Blog</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+	<p>
+		&copy; 2024 <a href="https://mmb198.github.io"></a>
+		&#183; mmb198
+		&#183; Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>
+		&#183; Theme <a href="https://github.com/1bl4z3r/hermit-V2" target="_blank" rel="noopener">Hermit-V2</a>
+		
+		&#183; <a href="https://mmb198.github.io/en/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		
+	</p>
+
+</footer>
+<script async src="https://mmb198.github.io/js/bundle.min.038214de9d568246fadcfeb06c69349925de3209f332ec123861b6aa031d63c6.js" integrity="sha256-A4IU3p1Wgkb63P6wbGk0mSXeMgnzMuwSOGG2qgMdY8Y=" crossorigin="anonymous"></script><script async src="https://mmb198.github.io/js/link-share.min.24409a4f6e5537d70ffc55ec8f9192208d718678cb8638585342423020b37f39.js" integrity="sha256-JECaT25VN9cP/FXsj5GSII1xhnjLhjhYU0JCMCCzfzk=" crossorigin="anonymous"></script>
+</body>
+
+</html>

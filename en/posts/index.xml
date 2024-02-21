@@ -6,8 +6,132 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-au</language>
 		<copyright>mmb198</copyright>
-		<lastBuildDate>Wed, 14 Feb 2024 21:25:43 +0800</lastBuildDate>
+		<lastBuildDate>Wed, 21 Feb 2024 21:37:43 +0800</lastBuildDate>
 		<atom:link href="https://mmb198.github.io/en/posts/index.xml" rel="self" type="application/rss+xml" />
+		
+		<item>
+			<title>Cloud Engineer Academy Week 2 Blog</title>
+			<link>https://mmb198.github.io/en/posts/ca_week2/</link>
+			<pubDate>Wed, 21 Feb 2024 21:37:43 +0800</pubDate>
+			
+			<guid>https://mmb198.github.io/en/posts/ca_week2/</guid>
+			<description>Version Control Learnt about 3 main types of version control systems: 1. Local: All repositories/data are only held and accessible from a local machine, making it difficult to collaborate with others. 2. Centralised: The repository is kept on a main server, any updates have to be committed to the central server. 3. Distributed: Repositories are distributed across end users and servers. Any of the users or servers can act as the central repository.</description>
+			<content type="html"><![CDATA[<h1 id="version-control">Version Control</h1>
+<p>Learnt about 3 main types of version control systems:
+1. Local: All repositories/data are only held and accessible from a local machine, making it difficult to collaborate with others.
+2. Centralised: The repository is kept on a main server, any updates have to be committed to the central server.
+3. Distributed: Repositories are distributed across end users and servers. Any of the users or servers can act as the central repository.</p>
+<h1 id="git">GIT</h1>
+<ul>
+<li>Set up a GitHub account, configured MFA and ssh access. Command to check that ssh is connected **ssh -T <a href="mailto:git@github.com">git@github.com</a></li>
+<li>Installed git in Windows and Linux and set up CLI access via ssh.
+<ul>
+<li>SSH encrypts the data flow between my machine and github, ensuring confidentiality in the transmission of data that I commit to the repo.</li>
+</ul>
+</li>
+</ul>
+<h1 id="aws-cli">AWS CLI</h1>
+<ul>
+<li>Installed the AWS CLI in Windows and Linux</li>
+<li>Added security keys in AWS console and installed them into AWS CLI. This now enables control of my AWS account through the CLI. The CLI is definitely faster than clicking and confirming through the console.</li>
+<li>Command structure:
+aws + service type + what you want to do, examples:
+aws + s3 service + list files = <strong>aws s3 ls</strong>
+aws + iam + list access keys = <strong>aws iam list-access-keys</strong></li>
+</ul>
+<h1 id="cloud-architecture--system-design">Cloud Architecture &amp; System Design</h1>
+<h2 id="front-end-vs-back-end">Front end vs back end</h2>
+<ul>
+<li>Front end = user facing, interacts with the backend via API&rsquo;s (Application Programming Interface).</li>
+<li>Back end = All of the infrastructure and applications that enables the front end to function.</li>
+</ul>
+<h2 id="vertical-vs-horizontal-scaling">Vertical vs Horizontal scaling</h2>
+<ul>
+<li>Vertical scaling = increasing or decreasing the size of the hardware - such as EC2 t2.micro, t2.small, t2.medium etc. As the size increases additional hardware is provided such as more CPU cores and memory.</li>
+<li>Horizontal scaling = Instead of increasing hardware capacity as with vertical scaling, horizontal scaling instead increases the amount of instances. Instead of increasing from a t2.micro instance to a single t2.small instance, you could run 3 x t2.micro instances. This provides additional computing resources and also provides redundancy as there are now two extra compute instances in the event that one of them becomes unresponsive or crashes.</li>
+</ul>
+<h2 id="load-balancing">Load Balancing</h2>
+<p>These can be hardware or software that distributes data across your infrastructure. Is used to ensure that a server isn&rsquo;t being overloaded while other servers are sitting idle. Can also decide which server is closest to the end user in order to reduce latency for their request.</p>
+<h2 id="high-availability-and-fault-tolerance">High Availability and Fault Tolerance</h2>
+<ul>
+<li>High availability = Redundancy within a network that enables standby infrastructure to take over in the event of the main services becoming unresponsive or crashing. Multiple instances can be used across different Availability Zones (AZ) to ensure continued operation even if an AZ experiences an outage. Use of health checks, auto scaling and load balancing to maintain high availability.</li>
+<li>Fault tolerance = The ability to continue providing services in the event of a fault, issue or outage. Intent is that faults do not impact the user experience.</li>
+</ul>
+<h2 id="lab---design-a-web-application-architecture">Lab - Design a Web Application Architecture</h2>
+<p><img src="/week2.png" alt="AWS web app architecture v3"></p>
+<p>Summary of Cloud Architecture for Web Application</p>
+<p>This document outlines the purpose of each component and the rationale behind key architectural decisions in our cloud architecture for the web application.</p>
+<p><strong>Components:</strong></p>
+<ul>
+<li><strong>VPC (Virtual Private Cloud):</strong> Provides a secure and isolated environment for our application resources.</li>
+<li><strong>Route 53:</strong> Routes incoming traffic to the application through a domain name.</li>
+<li><strong>Public and Private Subnets:</strong> </li>
+<li><strong>Public Subnets:</strong>
+<ul>
+<li><strong>Purpose:</strong> Host web servers that require internet access to serve content to users.</li>
+<li><strong>Reasoning:</strong> Enables users to access the application through the internet.</li>
+</ul>
+</li>
+<li><strong>Private Subnets:</strong>
+<ul>
+<li><strong>Purpose:</strong> Host application servers and databases that don&rsquo;t require direct internet access but need to communicate with web servers.</li>
+<li><strong>Reasoning:</strong> Enhances security by restricting access to critical components from the public internet.</li>
+</ul>
+</li>
+<li><strong>Web Servers and Application Servers:</strong> </li>
+<li><strong>Web Servers (EC2 Instances):</strong>
+<ul>
+<li><strong>Purpose:</strong> Serve static content (HTML, CSS, JavaScript) and handle initial user requests.</li>
+<li><strong>Reasoning:</strong> Offloads static content serving from application servers, improving performance and scalability.</li>
+</ul>
+</li>
+<li><strong>Application Servers (EC2 Instances):</strong>
+<ul>
+<li><strong>Purpose:</strong> Process application logic, interact with the database, and generate dynamic content.</li>
+<li><strong>Reasoning:</strong> Provides flexibility and scalability for handling application logic and database interactions.EC2 instances host the web application and application logic.</li>
+</ul>
+</li>
+<li><strong>Load Balancers:</strong> 
+<ul>
+<li><strong>Purpose:</strong> Distribute incoming traffic evenly across multiple web and application servers.</li>
+<li><strong>Reasoning:</strong> Ensures high availability and prevents overloading individual servers, improving application performance and scalability.</li>
+</ul>
+</li>
+<li><strong>AWS WAF:</strong> Protects the web application from malicious attacks.
+<ul>
+<li>
+<ul>
+<li><strong>Purpose:</strong> Filters and blocks malicious traffic attempting to exploit vulnerabilities in the web application.</li>
+</ul>
+</li>
+<li><strong>Reasoning:</strong> Strengthens application security by mitigating common web attacks like SQL injection and cross-site scripting</li>
+</ul>
+</li>
+<li><strong>Amazon RDS (Relational Database Service):</strong> 
+<ul>
+<li><strong>Purpose:</strong> Provides a managed, scalable, and highly available database service for storing application data.</li>
+<li><strong>Reasoning:</strong> Offers a reliable and secure solution for managing application data without the need for manual database administration.</li>
+</ul>
+</li>
+<li><strong>AWS S3:</strong> 
+<ul>
+<li>
+<ul>
+<li><strong>Purpose:</strong> Stores static content like images, videos, and other application assets cost-effectively and efficiently.</li>
+</ul>
+</li>
+<li><strong>Reasoning:</strong> Provides a scalable and cost-effective way to store and manage large amounts of static content, offloading storage from web servers and improving performance.</li>
+</ul>
+</li>
+</ul>
+<p><strong>Architectural Decisions:</strong></p>
+<ul>
+<li><strong>Horizontal Scaling:</strong> Web and application servers are deployed in auto scaling groups for horizontal scaling. This allows automatic scaling up or down based on traffic demands, ensuring optimal performance and resource utilization.</li>
+<li><strong>Redundancy:</strong> Deploying critical components like web servers, application servers, and databases across multiple availability zones within the VPC ensures continued operation even if one zone experiences an outage.</li>
+<li><strong>Security:</strong> Utilizing a VPC with public/private subnets and a WAF strengthens the application&rsquo;s security posture by isolating resources and filtering malicious traffic.</li>
+</ul>
+]]></content>
+		</item>
 		
 		<item>
 			<title>Cloud Engineer Academy Week 1 Blog</title>
