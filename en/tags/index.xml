@@ -7,27 +7,34 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-au</language>
     <copyright>mmb198</copyright>
-    <lastBuildDate>Wed, 21 Feb 2024 21:37:43 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 21 Apr 2024 21:32:09 +0800</lastBuildDate>
     <atom:link href="https://mmb198.github.io/en/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>cloudengineeringacademy</title>
       <link>https://mmb198.github.io/en/tags/cloudengineeringacademy/</link>
-      <pubDate>Wed, 21 Feb 2024 21:37:43 +0800</pubDate>
+      <pubDate>Sun, 21 Apr 2024 21:32:09 +0800</pubDate>
       <guid>https://mmb198.github.io/en/tags/cloudengineeringacademy/</guid>
       <description></description>
     </item>
     <item>
-      <title>week2</title>
-      <link>https://mmb198.github.io/en/tags/week2/</link>
-      <pubDate>Wed, 21 Feb 2024 21:37:43 +0800</pubDate>
-      <guid>https://mmb198.github.io/en/tags/week2/</guid>
+      <title>module3</title>
+      <link>https://mmb198.github.io/en/tags/module3/</link>
+      <pubDate>Sun, 21 Apr 2024 21:32:09 +0800</pubDate>
+      <guid>https://mmb198.github.io/en/tags/module3/</guid>
       <description></description>
     </item>
     <item>
-      <title>week1</title>
-      <link>https://mmb198.github.io/en/tags/week1/</link>
+      <title>module2</title>
+      <link>https://mmb198.github.io/en/tags/module2/</link>
+      <pubDate>Wed, 21 Feb 2024 21:37:43 +0800</pubDate>
+      <guid>https://mmb198.github.io/en/tags/module2/</guid>
+      <description></description>
+    </item>
+    <item>
+      <title>module1</title>
+      <link>https://mmb198.github.io/en/tags/module1/</link>
       <pubDate>Wed, 14 Feb 2024 21:25:43 +0800</pubDate>
-      <guid>https://mmb198.github.io/en/tags/week1/</guid>
+      <guid>https://mmb198.github.io/en/tags/module1/</guid>
       <description></description>
     </item>
   </channel>

@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>module3 on mmb198 blog site</title>
+    <link>https://mmb198.github.io/en/tags/module3/</link>
+    <description>Recent content in module3 on mmb198 blog site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-au</language>
+    <copyright>mmb198</copyright>
+    <lastBuildDate>Sun, 21 Apr 2024 21:32:09 +0800</lastBuildDate>
+    <atom:link href="https://mmb198.github.io/en/tags/module3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud Engineer Academy Module 3 Blog - System Design and Architecture</title>
+      <link>https://mmb198.github.io/en/posts/ca_module3/</link>
+      <pubDate>Sun, 21 Apr 2024 21:32:09 +0800</pubDate>
+      <guid>https://mmb198.github.io/en/posts/ca_module3/</guid>
+      <description>The Cyber Engineering Academy started as a 12 week course with a new subject per week (12 weeks = 12 subjects) but this was a little ambitious! The reality is that a single week for AWS (week 5), isn&amp;rsquo;t enough time so this timeline has been blown out. I&amp;rsquo;ll now be referring to modules rather than weeks.&#xA;Module 3 - System Design and Architecture This module covered common architecture types (monolithic, microservices and serverless), Application Programmable Interfaces (APIs), Load Balancers and cloud storage options (object, block and file).</description>
+    </item>
+  </channel>
+</rss>

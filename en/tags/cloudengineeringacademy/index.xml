@@ -7,17 +7,24 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-au</language>
     <copyright>mmb198</copyright>
-    <lastBuildDate>Wed, 21 Feb 2024 21:37:43 +0800</lastBuildDate>
+    <lastBuildDate>Sun, 21 Apr 2024 21:32:09 +0800</lastBuildDate>
     <atom:link href="https://mmb198.github.io/en/tags/cloudengineeringacademy/index.xml" rel="self" type="application/rss+xml" />
     <item>
-      <title>Cloud Engineer Academy Week 2 Blog</title>
+      <title>Cloud Engineer Academy Module 3 Blog - System Design and Architecture</title>
+      <link>https://mmb198.github.io/en/posts/ca_module3/</link>
+      <pubDate>Sun, 21 Apr 2024 21:32:09 +0800</pubDate>
+      <guid>https://mmb198.github.io/en/posts/ca_module3/</guid>
+      <description>The Cyber Engineering Academy started as a 12 week course with a new subject per week (12 weeks = 12 subjects) but this was a little ambitious! The reality is that a single week for AWS (week 5), isn&amp;rsquo;t enough time so this timeline has been blown out. I&amp;rsquo;ll now be referring to modules rather than weeks.&#xA;Module 3 - System Design and Architecture This module covered common architecture types (monolithic, microservices and serverless), Application Programmable Interfaces (APIs), Load Balancers and cloud storage options (object, block and file).</description>
+    </item>
+    <item>
+      <title>Cloud Engineer Academy Module 2 Blog - Git &amp; Cloud Architecture</title>
       <link>https://mmb198.github.io/en/posts/ca_week2/</link>
       <pubDate>Wed, 21 Feb 2024 21:37:43 +0800</pubDate>
       <guid>https://mmb198.github.io/en/posts/ca_week2/</guid>
       <description>Version Control Learnt about 3 main types of version control systems: 1. Local: All repositories/data are only held and accessible from a local machine, making it difficult to collaborate with others. 2. Centralised: The repository is kept on a main server, any updates have to be committed to the central server. 3. Distributed: Repositories are distributed across end users and servers. Any of the users or servers can act as the central repository.</description>
     </item>
     <item>
-      <title>Cloud Engineer Academy Week 1 Blog</title>
+      <title>Cloud Engineer Academy Module 1 Blog - Cloud Fundamentals</title>
       <link>https://mmb198.github.io/en/posts/ca_week1/</link>
       <pubDate>Wed, 14 Feb 2024 21:25:43 +0800</pubDate>
       <guid>https://mmb198.github.io/en/posts/ca_week1/</guid>

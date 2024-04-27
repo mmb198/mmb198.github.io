@@ -2,28 +2,34 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://mmb198.github.io/en/posts/ca_module3/</loc>
+    <lastmod>2024-04-21T21:32:09+08:00</lastmod>
+  </url><url>
+    <loc>https://mmb198.github.io/en/tags/cloudengineeringacademy/</loc>
+    <lastmod>2024-04-21T21:32:09+08:00</lastmod>
+  </url><url>
+    <loc>https://mmb198.github.io/en/</loc>
+    <lastmod>2024-04-21T21:32:09+08:00</lastmod>
+  </url><url>
+    <loc>https://mmb198.github.io/en/tags/module3/</loc>
+    <lastmod>2024-04-21T21:32:09+08:00</lastmod>
+  </url><url>
+    <loc>https://mmb198.github.io/en/posts/</loc>
+    <lastmod>2024-04-21T21:32:09+08:00</lastmod>
+  </url><url>
+    <loc>https://mmb198.github.io/en/tags/</loc>
+    <lastmod>2024-04-21T21:32:09+08:00</lastmod>
+  </url><url>
     <loc>https://mmb198.github.io/en/posts/ca_week2/</loc>
     <lastmod>2024-02-21T21:37:43+08:00</lastmod>
   </url><url>
-    <loc>https://mmb198.github.io/en/tags/cloudengineeringacademy/</loc>
-    <lastmod>2024-02-21T21:37:43+08:00</lastmod>
-  </url><url>
-    <loc>https://mmb198.github.io/en/</loc>
-    <lastmod>2024-02-21T21:37:43+08:00</lastmod>
-  </url><url>
-    <loc>https://mmb198.github.io/en/posts/</loc>
-    <lastmod>2024-02-21T21:37:43+08:00</lastmod>
-  </url><url>
-    <loc>https://mmb198.github.io/en/tags/</loc>
-    <lastmod>2024-02-21T21:37:43+08:00</lastmod>
-  </url><url>
-    <loc>https://mmb198.github.io/en/tags/week2/</loc>
+    <loc>https://mmb198.github.io/en/tags/module2/</loc>
     <lastmod>2024-02-21T21:37:43+08:00</lastmod>
   </url><url>
     <loc>https://mmb198.github.io/en/posts/ca_week1/</loc>
     <lastmod>2024-02-14T21:25:43+08:00</lastmod>
   </url><url>
-    <loc>https://mmb198.github.io/en/tags/week1/</loc>
+    <loc>https://mmb198.github.io/en/tags/module1/</loc>
     <lastmod>2024-02-14T21:25:43+08:00</lastmod>
   </url>
 </urlset>

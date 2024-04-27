@@ -6,11 +6,201 @@
 		<generator>Hugo -- gohugo.io</generator>
 		<language>en-au</language>
 		<copyright>mmb198</copyright>
-		<lastBuildDate>Wed, 21 Feb 2024 21:37:43 +0800</lastBuildDate>
+		<lastBuildDate>Sun, 21 Apr 2024 21:32:09 +0800</lastBuildDate>
 		<atom:link href="https://mmb198.github.io/en/posts/index.xml" rel="self" type="application/rss+xml" />
 		
 		<item>
-			<title>Cloud Engineer Academy Week 2 Blog</title>
+			<title>Cloud Engineer Academy Module 3 Blog - System Design and Architecture</title>
+			<link>https://mmb198.github.io/en/posts/ca_module3/</link>
+			<pubDate>Sun, 21 Apr 2024 21:32:09 +0800</pubDate>
+			
+			<guid>https://mmb198.github.io/en/posts/ca_module3/</guid>
+			<description>The Cyber Engineering Academy started as a 12 week course with a new subject per week (12 weeks = 12 subjects) but this was a little ambitious! The reality is that a single week for AWS (week 5), isn&amp;rsquo;t enough time so this timeline has been blown out. I&amp;rsquo;ll now be referring to modules rather than weeks.
+Module 3 - System Design and Architecture This module covered common architecture types (monolithic, microservices and serverless), Application Programmable Interfaces (APIs), Load Balancers and cloud storage options (object, block and file).</description>
+			<content type="html"><![CDATA[<p>The Cyber Engineering Academy started as a 12 week course with a new subject per week (12 weeks = 12 subjects) but this was a little ambitious! The reality is that a single week for AWS (week 5), isn&rsquo;t enough time so this timeline has been blown out. I&rsquo;ll now be referring to modules rather than weeks.</p>
+<p>Module 3 - System Design and Architecture
+This module covered common architecture types (monolithic, microservices and serverless), Application Programmable Interfaces (APIs), Load Balancers and cloud storage options (object, block and file).</p>
+<p>I&rsquo;m only doing a short summary for the blog as I&rsquo;m posting the architecture project below and it covers in detail all three architecture types, explains use cases and advantages and disadvantages for architecture type.</p>
+<h2 id="part-1-monolithic-architecture-design">Part 1: Monolithic Architecture Design</h2>
+<p><strong>Core Functionalities:</strong></p>
+<ol>
+<li>User registration</li>
+<li>Product catalog</li>
+<li>Shopping cart</li>
+<li>Order processing</li>
+</ol>
+<p><strong>High-Level Architecture Diagram:</strong></p>
+<pre tabindex="0"><code>|------------------------|
+|         Frontend       |
+|------------------------|
+            |
+            v
+|------------------------|
+|    Business Logic      |
+|      (Monolith)        |
+|------------------------|
+            |
+            v
+|------------------------|
+|        Database        |
+|------------------------|
+</code></pre><p><strong>Advantages:</strong></p>
+<ul>
+<li><strong>Simplicity and Uniformity:</strong> Easy to develop, deploy, and manage as everything is contained within a single codebase.</li>
+<li><strong>Ease of Deployment:</strong> Deployment is straightforward as there&rsquo;s only one unit to deploy.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li><strong>Scalability:</strong> Scaling the application can be challenging as all components are tightly coupled, making it difficult to scale individual parts independently.</li>
+<li><strong>Flexibility:</strong> Changes or updates to one part of the application may require redeploying the entire monolith.</li>
+<li><strong>Deployment:</strong> Scaling the monolith horizontally can be costly and inefficient.</li>
+</ul>
+<h2 id="part-2-refactoring-into-microservices">Part 2: Refactoring into Microservices</h2>
+<p><strong>Identified Microservices:</strong></p>
+<ol>
+<li>User Service</li>
+<li>Product Service</li>
+<li>Cart Service</li>
+<li>Order Service</li>
+</ol>
+<p><strong>Updated Architecture Diagram:</strong></p>
+<pre tabindex="0"><code>|------------------------|
+|         Frontend       |
+|------------------------|
+            |
+            v
+|------------------------|
+|     User Service       |
+|------------------------|
+            |
+            v
+|------------------------|
+|    Product Service     |
+|------------------------|
+            |
+            v
+|------------------------|
+|     Cart Service       |
+|------------------------|
+            |
+            v
+|------------------------|
+|    Order Service       |
+|------------------------|
+            |
+            v
+|------------------------|
+|     Database(s)        |
+|------------------------|
+</code></pre><p><strong>Advantages:</strong></p>
+<ul>
+<li><strong>Scalability:</strong> Each microservice can be scaled independently based on demand, allowing for more efficient resource utilisation.</li>
+<li><strong>Flexibility:</strong> Changes or updates to one microservice can be made without affecting others, enabling faster development and deployment.</li>
+<li><strong>Deployment:</strong> Each microservice can be deployed independently, facilitating Continuous Deployment/Continuous Integration (CI/CD) practices.</li>
+</ul>
+<p><strong>Challenges:</strong></p>
+<ul>
+<li><strong>Development Complexity:</strong> Managing multiple services can increase development complexity, especially in terms of communication between services.</li>
+<li><strong>Deployment:</strong> Coordinating deployments across multiple services requires careful orchestration to maintain consistency and avoid service disruptions.</li>
+<li><strong>Consistency:</strong> Ensuring consistency in data management and transactions across distributed services can be challenging.</li>
+</ul>
+<h2 id="part-3-incorporating-serverless-architecture">Part 3: Incorporating Serverless Architecture</h2>
+<p><strong>Identified Serverless Components:</strong></p>
+<ol>
+<li>User Authentication</li>
+<li>Payment Processing</li>
+</ol>
+<p><strong>Updated Architecture Diagram:</strong></p>
+<pre tabindex="0"><code>|------------------------|
+|         Frontend       |
+|------------------------|
+             |
+             v
+|------------------------|
+|    User Authentication |  (Serverless)
+|------------------------|
+             |
+             v
+|------------------------|
+|   Product &amp; Order APIs |  (Microservices)
+|------------------------|
+             |
+             v
+|------------------------|
+|   Payment Processing   |  (Serverless)
+|------------------------|
+             |
+             v
+|------------------------|
+|     Database(s)        |
+|------------------------|
+</code></pre><p><strong>Benefits of Serverless Architecture:</strong></p>
+<ul>
+<li><strong>Scalability:</strong> Serverless functions auto-scale based on demand, ensuring resources are efficiently utilised and reducing the risk of over-provisioning.</li>
+<li><strong>Cost:</strong> Serverless architectures offer cost savings as you only pay for the resources consumed during execution, rather than provisioning fixed resources.</li>
+<li><strong>Operational Management:</strong> Serverless providers handle server management, scaling, and maintenance, reducing operational overhead for the development team.</li>
+</ul>
+<p><strong>Challenges:</strong></p>
+<ul>
+<li><strong>Cold Start:</strong> Serverless functions may experience latency during cold starts, impacting the responsiveness of the application.</li>
+<li><strong>Vendor Lock-in:</strong> Adopting serverless architectures may lead to vendor lock-in due to reliance on specific cloud providers&rsquo; services and APIs.</li>
+<li><strong>Debugging and Monitoring:</strong> Debugging and monitoring serverless functions can be more challenging compared to traditional architectures.</li>
+</ul>
+<p><strong>Comparison Report:</strong></p>
+<ol>
+<li>
+<p><strong>Scalability:</strong></p>
+<ul>
+<li>Monolithic: Limited scalability due to tight coupling.</li>
+<li>Microservices: Highly scalable, each service can be scaled independently.</li>
+<li>Serverless: Autoscaling capabilities offer efficient resource utilisation.</li>
+</ul>
+</li>
+<li>
+<p><strong>Development Complexity:</strong></p>
+<ul>
+<li>Monolithic: Simple development but can become complex as the application grows.</li>
+<li>Microservices: Increased complexity due to managing multiple services.</li>
+<li>Serverless: Simplifies development by abstracting infrastructure management, but can be complex in orchestrating functions.</li>
+</ul>
+</li>
+<li>
+<p><strong>Deployment:</strong></p>
+<ul>
+<li>Monolithic: Simple deployment but requires redeployment of the entire application for updates.</li>
+<li>Microservices: Requires careful orchestration for deployment across multiple services.</li>
+<li>Serverless: Facilitates easy and rapid deployments of individual functions.</li>
+</ul>
+</li>
+<li>
+<p><strong>Maintenance:</strong></p>
+<ul>
+<li>Monolithic: Maintenance can be cumbersome, especially for large applications.</li>
+<li>Microservices: Each service needs to be maintained individually.</li>
+<li>Serverless: Reduces operational overhead as infrastructure management is handled by the provider.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cost Implications:</strong></p>
+<ul>
+<li>Monolithic: Fixed infrastructure costs regardless of usage.</li>
+<li>Microservices: Costs may vary based on the number of services and their usage.</li>
+<li>Serverless: Cost-efficient as you only pay for actual usage.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Suitability for Different Projects:</strong></p>
+<ul>
+<li>Monolithic: Suitable for small-scale projects with predictable usage.</li>
+<li>Microservices: Ideal for large-scale projects with complex requirements and variable loads.</li>
+<li>Serverless: Well-suited for projects with sporadic or unpredictable workloads and where cost optimisation is crucial.</li>
+</ul>
+<p>Each architectural style has its strengths and weaknesses, and the choice depends on the specific requirements, scale, and constraints of the project.</p>
+]]></content>
+		</item>
+		
+		<item>
+			<title>Cloud Engineer Academy Module 2 Blog - Git &amp; Cloud Architecture</title>
 			<link>https://mmb198.github.io/en/posts/ca_week2/</link>
 			<pubDate>Wed, 21 Feb 2024 21:37:43 +0800</pubDate>
 			
@@ -134,7 +324,7 @@ aws + iam + list access keys = <strong>aws iam list-access-keys</strong></li>
 		</item>
 		
 		<item>
-			<title>Cloud Engineer Academy Week 1 Blog</title>
+			<title>Cloud Engineer Academy Module 1 Blog - Cloud Fundamentals</title>
 			<link>https://mmb198.github.io/en/posts/ca_week1/</link>
 			<pubDate>Wed, 14 Feb 2024 21:25:43 +0800</pubDate>
 			

@@ -1,0 +1,321 @@
+
+
+<!DOCTYPE html>
+<html lang="en-au">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<meta name="robots" content="index, follow">
+<meta name="revisit-after" content="15 days">
+<link rel="author" href="/humans.txt">
+<link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<meta name="msapplication-TileImage" content="/mstile-144x144.png">
+<link rel="shortcut icon" href="/favicon.ico">
+<meta name="theme-color" content="#494f5c">
+<meta name="msapplication-TileColor" content="#494f5c">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#494f5c"><meta name="author" content="">
+<meta itemprop="name" content="Cloud Engineer Academy Module 3 Blog - System Design and Architecture">
+<meta itemprop="description" content="The Cyber Engineering Academy started as a 12 week course with a new subject per week (12 weeks = 12 subjects) but this was a little ambitious! The reality is that a single week for AWS (week 5), isn&rsquo;t enough time so this timeline has been blown out. I&rsquo;ll now be referring to modules rather than weeks.
+Module 3 - System Design and Architecture This module covered common architecture types (monolithic, microservices and serverless), Application Programmable Interfaces (APIs), Load Balancers and cloud storage options (object, block and file)."><meta itemprop="datePublished" content="2024-04-21T21:32:09+08:00" />
+<meta itemprop="dateModified" content="2024-04-21T21:32:09+08:00" />
+<meta itemprop="wordCount" content="782">
+<meta itemprop="keywords" content="cloudengineeringacademy,module3," /><meta property="og:title" content="Cloud Engineer Academy Module 3 Blog - System Design and Architecture" />
+<meta property="og:description" content="The Cyber Engineering Academy started as a 12 week course with a new subject per week (12 weeks = 12 subjects) but this was a little ambitious! The reality is that a single week for AWS (week 5), isn&rsquo;t enough time so this timeline has been blown out. I&rsquo;ll now be referring to modules rather than weeks.
+Module 3 - System Design and Architecture This module covered common architecture types (monolithic, microservices and serverless), Application Programmable Interfaces (APIs), Load Balancers and cloud storage options (object, block and file)." />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://mmb198.github.io/en/posts/ca_module3/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2024-04-21T21:32:09+08:00" />
+<meta property="article:modified_time" content="2024-04-21T21:32:09+08:00" />
+
+<meta name="twitter:card" content="summary"/><meta name="twitter:title" content="Cloud Engineer Academy Module 3 Blog - System Design and Architecture"/>
+<meta name="twitter:description" content="The Cyber Engineering Academy started as a 12 week course with a new subject per week (12 weeks = 12 subjects) but this was a little ambitious! The reality is that a single week for AWS (week 5), isn&rsquo;t enough time so this timeline has been blown out. I&rsquo;ll now be referring to modules rather than weeks.
+Module 3 - System Design and Architecture This module covered common architecture types (monolithic, microservices and serverless), Application Programmable Interfaces (APIs), Load Balancers and cloud storage options (object, block and file)."/>
+<title>Cloud Engineer Academy Module 3 Blog - System Design and Architecture</title>
+<link rel="stylesheet dns-prefetch preconnect preload prefetch" as="style" href="https://mmb198.github.io/css/style.min.627c6e340ad1c87ebacbb2c0bd5ca88f784362d2a768bb67f5892a1c98b9db19.css" integrity="sha256-YnxuNArRyH66y7LAvVyoj3hDYtKnaLtn9YkqHJi52xk=" crossorigin="anonymous">
+	</head>
+<body id="page">
+	<header id="site-header" class="animated slideInUp">
+		<div class="hdr-wrapper section-inner">
+			<div class="hdr-left">
+				<div class="site-branding">
+					<a href="https://mmb198.github.io">mmb198 blog site</a>
+				</div>
+				<nav class="site-nav hide-in-mobile"><a href="https://mmb198.github.io/en/posts/">Posts</a><a href="https://mmb198.github.io/en/about-hugo/">About</a></nav>
+			</div>
+			<div class="hdr-right hdr-icons">
+				<span class="hdr-social hide-in-mobile"><a href="https://github.com/mmb198" target="_blank" rel="noopener me" title="Github"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg></a></span><button id="share-btn" class="hdr-btn" title="Share"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-share-2"><circle cx="18" cy="5" r="3"></circle><circle cx="6" cy="12" r="3"></circle><circle cx="18" cy="19" r="3"></circle><line x1="8.59" y1="13.51" x2="15.42" y2="17.49"></line><line x1="15.41" y1="6.51" x2="8.59" y2="10.49"></line></svg></button>
+ 
+<div id="share-links" class="animated fast">
+    
+    
+    
+    
+    <ul>
+        <li>
+            <a href="https://twitter.com/intent/tweet?hashtags=hermit2&amp;url=https%3a%2f%2fmmb198.github.io%2fen%2fposts%2fca_module3%2f&amp;text=Cloud%20Engineer%20Academy%20Module%203%20Blog%20-%20System%20Design%20and%20Architecture" target="_blank" rel="noopener" aria-label="Share on X"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path class="st0" d="m21.3 21.1 -11.4 -18.2h-7.2l11.4 18.2zm-18.6 0 7.2 -6.6m4.2 -5 7.2 -6.6"/></svg></a>
+        </li>
+        <li>
+            <a href="https://facebook.com/sharer/sharer.php?u=https%3a%2f%2fmmb198.github.io%2fen%2fposts%2fca_module3%2f" target="_blank" rel="noopener" aria-label="Share on Facebook"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"></path></svg></a>
+        </li>
+        <li>
+            <a href="mailto:?subject=Cloud%20Engineer%20Academy%20Module%203%20Blog%20-%20System%20Design%20and%20Architecture&amp;body=https%3a%2f%2fmmb198.github.io%2fen%2fposts%2fca_module3%2f" target="_self" rel="noopener" aria-label="Share on Email"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></a>
+        </li>
+        <li>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https%3a%2f%2fmmb198.github.io%2fen%2fposts%2fca_module3%2f&amp;source=https%3a%2f%2fmmb198.github.io&amp;title=Cloud%20Engineer%20Academy%20Module%203%20Blog%20-%20System%20Design%20and%20Architecture&amp;summary=Cloud%20Engineer%20Academy%20Module%203%20Blog%20-%20System%20Design%20and%20Architecture%2c%20by%20%3cnil%3e%0a%0a%3cnil%3e%0a" target="_blank" rel="noopener" aria-label="Share on LinkedIn"><svg xmlns="http://www.w3.org/2000/svg" class="feather" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+        </li>
+        <li>
+            <a href="#" onclick="linkShare(&#34;Cloud Engineer Academy Module 3 Blog - System Design and Architecture&#34;,&#34;https://mmb198.github.io/en/posts/ca_module3/&#34;,&#34;Cloud Engineer Academy Module 3 Blog - System Design and Architecture, by \u003cnil\u003e\n\n\u003cnil\u003e\n&#34;); return false;" target="_self" rel="noopener" aria-label="Copy Link"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-copy"><rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect><path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path></svg></a>
+        </li>
+    </ul>
+</div><button id="menu-btn" class="hdr-btn" title="Menu"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line></svg></button>
+			</div>
+		</div>
+	</header>
+	<div id="mobile-menu" class="animated fast">
+		<ul>
+			<li><a href="https://mmb198.github.io/en/posts/">Posts</a></li>
+			<li><a href="https://mmb198.github.io/en/about-hugo/">About</a></li>
+		</ul>
+	</div>
+
+
+	<main class="site-main section-inner animated fadeIn faster"><article class="thin">
+			<header class="post-header">
+				<div class="post-meta"><span>Apr 21, 2024</span></div>
+				<h1>Cloud Engineer Academy Module 3 Blog - System Design and Architecture</h1>
+			</header>
+			<div class="post-info"><p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-feather"><path d="M20.24 12.24a6 6 0 0 0-8.49-8.49L5 10.5V19h8.5z"></path><line x1="16" y1="8" x2="2" y2="22"></line><line x1="17.5" y1="15" x2="9" y2="15"></line></svg><a href="" target="_blank"></a></p>
+<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-tag meta-icon"><path d="M20.59 13.41l-7.17 7.17a2 2 0 0 1-2.83 0L2 12V2h10l8.59 8.59a2 2 0 0 1 0 2.82z"></path><line x1="7" y1="7" x2="7" y2="7"></line></svg><span class="tag"><a href="https://mmb198.github.io/en/tags/cloudengineeringacademy">cloudengineeringacademy</a></span><span class="tag"><a href="https://mmb198.github.io/en/tags/module3">module3</a></span></p>
+<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file-text"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path><polyline points="14 2 14 8 20 8"></polyline><line x1="16" y1="13" x2="8" y2="13"></line><line x1="16" y1="17" x2="8" y2="17"></line><polyline points="10 9 9 9 8 9"></polyline></svg>782 Words
+    - Read time = 
+    
+    
+    
+    3 Minutes, 33 Seconds</p>
+<p><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-calendar"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>2024-04-21 21:32 &#43;0800</p></div>
+			<hr class="post-end">
+			<div class="content">
+				<p>The Cyber Engineering Academy started as a 12 week course with a new subject per week (12 weeks = 12 subjects) but this was a little ambitious! The reality is that a single week for AWS (week 5), isn&rsquo;t enough time so this timeline has been blown out. I&rsquo;ll now be referring to modules rather than weeks.</p>
+<p>Module 3 - System Design and Architecture
+This module covered common architecture types (monolithic, microservices and serverless), Application Programmable Interfaces (APIs), Load Balancers and cloud storage options (object, block and file).</p>
+<p>I&rsquo;m only doing a short summary for the blog as I&rsquo;m posting the architecture project below and it covers in detail all three architecture types, explains use cases and advantages and disadvantages for architecture type.</p>
+<h2 id="part-1-monolithic-architecture-design">Part 1: Monolithic Architecture Design<a href="#part-1-monolithic-architecture-design" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p><strong>Core Functionalities:</strong></p>
+<ol>
+<li>User registration</li>
+<li>Product catalog</li>
+<li>Shopping cart</li>
+<li>Order processing</li>
+</ol>
+<p><strong>High-Level Architecture Diagram:</strong></p>
+<pre tabindex="0"><code>|------------------------|
+|         Frontend       |
+|------------------------|
+            |
+            v
+|------------------------|
+|    Business Logic      |
+|      (Monolith)        |
+|------------------------|
+            |
+            v
+|------------------------|
+|        Database        |
+|------------------------|
+</code></pre><p><strong>Advantages:</strong></p>
+<ul>
+<li><strong>Simplicity and Uniformity:</strong> Easy to develop, deploy, and manage as everything is contained within a single codebase.</li>
+<li><strong>Ease of Deployment:</strong> Deployment is straightforward as there&rsquo;s only one unit to deploy.</li>
+</ul>
+<p><strong>Disadvantages:</strong></p>
+<ul>
+<li><strong>Scalability:</strong> Scaling the application can be challenging as all components are tightly coupled, making it difficult to scale individual parts independently.</li>
+<li><strong>Flexibility:</strong> Changes or updates to one part of the application may require redeploying the entire monolith.</li>
+<li><strong>Deployment:</strong> Scaling the monolith horizontally can be costly and inefficient.</li>
+</ul>
+<h2 id="part-2-refactoring-into-microservices">Part 2: Refactoring into Microservices<a href="#part-2-refactoring-into-microservices" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p><strong>Identified Microservices:</strong></p>
+<ol>
+<li>User Service</li>
+<li>Product Service</li>
+<li>Cart Service</li>
+<li>Order Service</li>
+</ol>
+<p><strong>Updated Architecture Diagram:</strong></p>
+<pre tabindex="0"><code>|------------------------|
+|         Frontend       |
+|------------------------|
+            |
+            v
+|------------------------|
+|     User Service       |
+|------------------------|
+            |
+            v
+|------------------------|
+|    Product Service     |
+|------------------------|
+            |
+            v
+|------------------------|
+|     Cart Service       |
+|------------------------|
+            |
+            v
+|------------------------|
+|    Order Service       |
+|------------------------|
+            |
+            v
+|------------------------|
+|     Database(s)        |
+|------------------------|
+</code></pre><p><strong>Advantages:</strong></p>
+<ul>
+<li><strong>Scalability:</strong> Each microservice can be scaled independently based on demand, allowing for more efficient resource utilisation.</li>
+<li><strong>Flexibility:</strong> Changes or updates to one microservice can be made without affecting others, enabling faster development and deployment.</li>
+<li><strong>Deployment:</strong> Each microservice can be deployed independently, facilitating Continuous Deployment/Continuous Integration (CI/CD) practices.</li>
+</ul>
+<p><strong>Challenges:</strong></p>
+<ul>
+<li><strong>Development Complexity:</strong> Managing multiple services can increase development complexity, especially in terms of communication between services.</li>
+<li><strong>Deployment:</strong> Coordinating deployments across multiple services requires careful orchestration to maintain consistency and avoid service disruptions.</li>
+<li><strong>Consistency:</strong> Ensuring consistency in data management and transactions across distributed services can be challenging.</li>
+</ul>
+<h2 id="part-3-incorporating-serverless-architecture">Part 3: Incorporating Serverless Architecture<a href="#part-3-incorporating-serverless-architecture" class="anchor" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 7h3a5 5 0 0 1 5 5 5 5 0 0 1-5 5h-3m-6 0H6a5 5 0 0 1-5-5 5 5 0 0 1 5-5h3"></path><line x1="8" y1="12" x2="16" y2="12"></line></svg></a></h2>
+<p><strong>Identified Serverless Components:</strong></p>
+<ol>
+<li>User Authentication</li>
+<li>Payment Processing</li>
+</ol>
+<p><strong>Updated Architecture Diagram:</strong></p>
+<pre tabindex="0"><code>|------------------------|
+|         Frontend       |
+|------------------------|
+             |
+             v
+|------------------------|
+|    User Authentication |  (Serverless)
+|------------------------|
+             |
+             v
+|------------------------|
+|   Product &amp; Order APIs |  (Microservices)
+|------------------------|
+             |
+             v
+|------------------------|
+|   Payment Processing   |  (Serverless)
+|------------------------|
+             |
+             v
+|------------------------|
+|     Database(s)        |
+|------------------------|
+</code></pre><p><strong>Benefits of Serverless Architecture:</strong></p>
+<ul>
+<li><strong>Scalability:</strong> Serverless functions auto-scale based on demand, ensuring resources are efficiently utilised and reducing the risk of over-provisioning.</li>
+<li><strong>Cost:</strong> Serverless architectures offer cost savings as you only pay for the resources consumed during execution, rather than provisioning fixed resources.</li>
+<li><strong>Operational Management:</strong> Serverless providers handle server management, scaling, and maintenance, reducing operational overhead for the development team.</li>
+</ul>
+<p><strong>Challenges:</strong></p>
+<ul>
+<li><strong>Cold Start:</strong> Serverless functions may experience latency during cold starts, impacting the responsiveness of the application.</li>
+<li><strong>Vendor Lock-in:</strong> Adopting serverless architectures may lead to vendor lock-in due to reliance on specific cloud providers&rsquo; services and APIs.</li>
+<li><strong>Debugging and Monitoring:</strong> Debugging and monitoring serverless functions can be more challenging compared to traditional architectures.</li>
+</ul>
+<p><strong>Comparison Report:</strong></p>
+<ol>
+<li>
+<p><strong>Scalability:</strong></p>
+<ul>
+<li>Monolithic: Limited scalability due to tight coupling.</li>
+<li>Microservices: Highly scalable, each service can be scaled independently.</li>
+<li>Serverless: Autoscaling capabilities offer efficient resource utilisation.</li>
+</ul>
+</li>
+<li>
+<p><strong>Development Complexity:</strong></p>
+<ul>
+<li>Monolithic: Simple development but can become complex as the application grows.</li>
+<li>Microservices: Increased complexity due to managing multiple services.</li>
+<li>Serverless: Simplifies development by abstracting infrastructure management, but can be complex in orchestrating functions.</li>
+</ul>
+</li>
+<li>
+<p><strong>Deployment:</strong></p>
+<ul>
+<li>Monolithic: Simple deployment but requires redeployment of the entire application for updates.</li>
+<li>Microservices: Requires careful orchestration for deployment across multiple services.</li>
+<li>Serverless: Facilitates easy and rapid deployments of individual functions.</li>
+</ul>
+</li>
+<li>
+<p><strong>Maintenance:</strong></p>
+<ul>
+<li>Monolithic: Maintenance can be cumbersome, especially for large applications.</li>
+<li>Microservices: Each service needs to be maintained individually.</li>
+<li>Serverless: Reduces operational overhead as infrastructure management is handled by the provider.</li>
+</ul>
+</li>
+<li>
+<p><strong>Cost Implications:</strong></p>
+<ul>
+<li>Monolithic: Fixed infrastructure costs regardless of usage.</li>
+<li>Microservices: Costs may vary based on the number of services and their usage.</li>
+<li>Serverless: Cost-efficient as you only pay for actual usage.</li>
+</ul>
+</li>
+</ol>
+<p><strong>Suitability for Different Projects:</strong></p>
+<ul>
+<li>Monolithic: Suitable for small-scale projects with predictable usage.</li>
+<li>Microservices: Ideal for large-scale projects with complex requirements and variable loads.</li>
+<li>Serverless: Well-suited for projects with sporadic or unpredictable workloads and where cost optimisation is crucial.</li>
+</ul>
+<p>Each architectural style has its strengths and weaknesses, and the choice depends on the specific requirements, scale, and constraints of the project.</p>
+
+			</div>
+
+<div class="related-posts thin">
+	<h2>See Also</h2>
+	<ul>
+	
+	<li><a href="/en/posts/ca_week2/">Cloud Engineer Academy Module 2 Blog - Git &amp; Cloud Architecture</a></li>
+	
+	<li><a href="/en/posts/ca_week1/">Cloud Engineer Academy Module 1 Blog - Cloud Fundamentals</a></li>
+	
+	</ul>
+</div>
+
+		</article>
+		<div class="post-nav thin">
+			<a class="prev-post" href="https://mmb198.github.io/en/posts/ca_week2/">
+				<span class="post-nav-label">Older&nbsp;<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-arrow-right"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg></span><br><span>Cloud Engineer Academy Module 2 Blog - Git &amp; Cloud Architecture</span>
+			</a>
+		</div>
+		<div id="comments" class="thin">
+</div>
+	</main>
+
+<footer id="site-footer" class="section-inner thin animated fadeIn faster">
+	<p>
+		&copy; 2024 <a href="https://mmb198.github.io"></a>
+		&#183; mmb198
+		&#183; Made with <a href="https://gohugo.io/" target="_blank" rel="noopener">Hugo</a>
+		&#183; Theme <a href="https://github.com/1bl4z3r/hermit-V2" target="_blank" rel="noopener">Hermit-V2</a>
+		
+		&#183; <a href="https://mmb198.github.io/en/posts/index.xml" target="_blank" title="rss"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-rss"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg></a>
+		
+	</p>
+
+</footer>
+<script async src="https://mmb198.github.io/js/bundle.min.038214de9d568246fadcfeb06c69349925de3209f332ec123861b6aa031d63c6.js" integrity="sha256-A4IU3p1Wgkb63P6wbGk0mSXeMgnzMuwSOGG2qgMdY8Y=" crossorigin="anonymous"></script><script async src="https://mmb198.github.io/js/link-share.min.24409a4f6e5537d70ffc55ec8f9192208d718678cb8638585342423020b37f39.js" integrity="sha256-JECaT25VN9cP/FXsj5GSII1xhnjLhjhYU0JCMCCzfzk=" crossorigin="anonymous"></script>
+</body>
+
+</html>
