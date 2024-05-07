@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>linux on mmb198 blog site</title>
+    <link>https://mmb198.github.io/en/tags/linux/</link>
+    <description>Recent content in linux on mmb198 blog site</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-au</language>
+    <copyright>mmb198</copyright>
+    <lastBuildDate>Tue, 07 May 2024 19:47:57 +0800</lastBuildDate>
+    <atom:link href="https://mmb198.github.io/en/tags/linux/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud Engineer Academy Module 4 Blog - Linux and Bash chmod</title>
+      <link>https://mmb198.github.io/en/posts/ca_module4/</link>
+      <pubDate>Tue, 07 May 2024 19:47:57 +0800</pubDate>
+      <guid>https://mmb198.github.io/en/posts/ca_module4/</guid>
+      <description>chmod numeric chmod (change mode) is a command in Linux and other Unix-like operating systems that allows you to change the permissions (read, write, execute) of files and directories.&#xA;In Linux, permissions are represented by three sets of characters: user (owner), group, and others. Each set consists of three characters representing the read (r), write (w), and execute (x) permissions. These permissions can be represented numerically as well, where read=4, write=2, and execute=1.</description>
+    </item>
+  </channel>
+</rss>

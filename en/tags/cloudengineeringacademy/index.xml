@@ -7,8 +7,15 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-au</language>
     <copyright>mmb198</copyright>
-    <lastBuildDate>Sun, 21 Apr 2024 21:32:09 +0800</lastBuildDate>
+    <lastBuildDate>Tue, 07 May 2024 19:47:57 +0800</lastBuildDate>
     <atom:link href="https://mmb198.github.io/en/tags/cloudengineeringacademy/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Cloud Engineer Academy Module 4 Blog - Linux and Bash chmod</title>
+      <link>https://mmb198.github.io/en/posts/ca_module4/</link>
+      <pubDate>Tue, 07 May 2024 19:47:57 +0800</pubDate>
+      <guid>https://mmb198.github.io/en/posts/ca_module4/</guid>
+      <description>chmod numeric chmod (change mode) is a command in Linux and other Unix-like operating systems that allows you to change the permissions (read, write, execute) of files and directories.&#xA;In Linux, permissions are represented by three sets of characters: user (owner), group, and others. Each set consists of three characters representing the read (r), write (w), and execute (x) permissions. These permissions can be represented numerically as well, where read=4, write=2, and execute=1.</description>
+    </item>
     <item>
       <title>Cloud Engineer Academy Module 3 Blog - System Design and Architecture</title>
       <link>https://mmb198.github.io/en/posts/ca_module3/</link>
